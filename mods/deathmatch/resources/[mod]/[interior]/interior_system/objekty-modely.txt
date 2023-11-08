@@ -1,0 +1,120 @@
+Stěny:
+3095 - stena_1
+9131 - stena_2
+2765 - stena_3
+2651 - stena_4
+2755 - stena_5
+4724 - stena_6
+7921 - stena_7
+7922 - stena_8
+
+Podlahy:
+- podlaha_1
+- podlaha_2
+- podlaha_3
+- podlaha_4
+- podlaha_5
+
+Střechy:
+- strecha_1
+- strecha_2
+- strecha_3
+- strecha_4
+- strecha_5
+
+Dveře:
+Základ - dvere_1
+3109 - dvere_2
+3092 - dvere_3
+3062 - dvere_4
+3061 - dvere_5
+2987 - dvere_6
+2924 - dvere_7
+
+Gauče:
+1712 - gauc_1
+14524 - gauc_2
+- gauc_3
+- gauc_4
+- gauc_5
+
+Stoly:
+3094 - stul_1
+3041 - stul_2
+2964 - stul_3
+1432 - stul_4
+1433 - stul_5
+1516 - stul_6
+1594 - stul_7
+1824 - stul_8
+1825 - stul_9
+1826 - stul_10
+1827 - stul_11
+1896 - stul_12
+2311 - stul_13
+2314 - stul_14
+2315 - stul_15
+2319 - stul_16
+2321 - stul_17
+2346 - stul_18
+2370 - stul_19
+2635 - stul_20
+2637 - stul_21
+2644 - stul_22
+2762 - stul_23
+2763 - stul_24
+2764 - stul_25
+2784 - stul_26
+2800 - stul_27
+2801 - stul_28
+2802 - stul_29
+3383 - stul_30
+
+Židle:
+1663 - zidle_1
+1671 - zidle_2
+1704 - zidle_3
+1705 - zidle_4
+1708 - zidle_5
+1711 - zidle_6
+1714 - zidle_7
+1715 - zidle_8
+1720 - zidle_9
+1735 - zidle_10
+1739 - zidle_11
+1806 - zidle_12
+1810 - zidle_13
+1811 - zidle_14
+2079 - zidle_15
+2096 - zidle_16
+2120 - zidle_17
+2121 - zidle_18
+2122 - zidle_19
+2123 - zidle_20
+2124 - zidle_21
+2125 - zidle_22
+2309 - zidle_23
+2310 - zidle_24
+2343 - zidle_25
+2356 - zidle_26
+2636 - zidle_27
+2748 - zidle_28
+2776 - zidle_29
+2788 - zidle_30
+932 - zidle_31
+
+Reproduktory: 
+1840 - reproduktor_1
+1841 - reproduktor_2
+2229 - reproduktor_3
+2230 - reproduktor_4
+2231 - reproduktor_5
+2232 - reproduktor_6
+2233 - reproduktor_7
+
+Počítače:
+2190 - pc_1
+- pc_2
+- pc_3
+- pc_4
+- pc_5

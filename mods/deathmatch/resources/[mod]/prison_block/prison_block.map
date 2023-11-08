@@ -1,0 +1,5 @@
+<map edf:definitions="editor_main">
+    <removeWorldObject id="removeWorldObject (int_policeA01) (1)" radius="8.1740093" interior="6" model="14843" lodModel="0" posX="266.35156" posY="81.19531" posZ="1001.2813" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (int_policeA01) (2)" radius="8.1740093" interior="6" model="14843" lodModel="0" posX="266.35156" posY="81.19531" posZ="1001.2813" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (int_policeA01) (3)" radius="8.1740093" interior="6" model="14843" lodModel="0" posX="266.35156" posY="81.19531" posZ="1001.2813" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+</map>

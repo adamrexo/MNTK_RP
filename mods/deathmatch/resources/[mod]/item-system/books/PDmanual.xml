@@ -1,0 +1,164 @@
+<content>
+	<numPages>12</numPages>
+
+	<page>UVOD
+
+Toto je policejni manual, ktery je urceny pro vsechny cleny jednotek zakona. Naleznete zde uzitecne a dulezite informace ohledne vasi sluzby.
+
+Jsme radi, ze jste si vybrali praci u jednotky zakona a tim podporujete a chranite nejen zakon ale i obcany tohoto statu.
+
+Tento manual by jste meli cely precist alespon jednou a pokud mozno hlavne radiove kody aktivne pouzivat.
+
+Doufame ze diky tomuto manualu se z vas stanou schopni strazci zakona a dokazete zastavit kazdeho a nekdy i zamezit zbytecne nasili.
+
+Vsechno vase chovani velice zavisi na celkove podobe tohoto statu, obyvatele se budou chovat podle zakonu a zakon jste vy.</page>
+	
+	<page>VYSILACKA
+
+Jako clen jednotky zakona jste povinnen byt naladen na stanici vysilacky vasi jednotky.
+
+Je potreba aby jste vzdy poslouchali prikazy a odpovidali na otazky ve vysilacce.
+
+Radiove vlny jsou vzdy zabezpeceny urcitou frekvenci a tim padem vas nemohou odposlouchavat civiliste a kriminalnici vzdalene.
+
+Dejte si ovsem pozor, protoze lide ve vasem okoli vas slysi.
+
+Nezapomente ze vysilacka je jednou z nejdulezitejsich casti vybavy clena jednotky zakona.</page>
+
+	<page>RADIOVE KODY
+
+10-1 	Odpovezte
+10-2 	Prijezd na scenu
+10-3 	Nesouhlas
+10-4 	Souhlas / potvrzuji
+10-5 	Zopakujte to
+10-6 	Vyckejte
+10-7 	Nahlaste lokaci
+
+10-8 	Podezrely ztracen
+10-9 	Podezrely zajisten
+10-10 	Upozorneni
+10-11 	Policejni zasah
+
+Kod 0 - Maly problem
+Kod 1 - Sledovani podezreleho
+Kod 2 - Pronasledovani vozidla
+Kod 3 - Pronasledovany utika
+Kod 4 – Specialni akce (vykradeni banky, ..)
+Kod Zelena - Vratte se na stanici
+Kod Cervena - Podezrely je ozbrojen
+Kod Cerna - Smrt / smrtelne zraneni na scene
+
+10-12 	Potrebuji posily
+10-13 	Policista zasazen
+10-14 	Pozaduji armadu
+10-15 	Pozaduji zachranarskou sluzbu
+10-16 	Pozaduji odtahovou sluzbu
+
+10-17	Popis podezreleho
+10-18 	MDC zaznamy na jmeno
+10-19 	Odpoved na MDC
+
+10-20 	Lokace
+10-30 	Pokracuji ve hlidce
+10-31 	Vracim se na stanici
+10-32 	Jedu tam
+
+Status 1 	Nyni jsem ve sluzbe
+Status 2  	Nyni jsem mimo sluzbu
+Status 3  	Nemohu se dostavit</page>
+
+	<page>POUZITI SILY
+
+Tier 1 - Poddajny
+Chovani podezreleho
+- Pronasledovani policisty
+- Mensi provokace
+
+Povolene pouziti sily
+- Pouze slovni pripominky, napr.: "Prosim, prestante."
+
+Tier 2 - Kontakt
+Chovani podezreleho
+- Urazky, hadka
+
+Povolene pouziti sily
+- Slovni prikazy, napr.: "Prestante!", "Nechte toho!"
+
+Tier 3 - Zvyseny kontakt
+Chovani podezreleho
+- Pronasledovani, provokace policisty nebo blokovani cesty
+- Podezrely neposloucha rozkazy policisty
+
+Povolene pouziti sily
+- Zavolani jineho policisty
+- Pokracovani ve varovani
+- Prechod mezi 3-4 muze vest k pouziti pout</page>
+
+	<page>POUZITI SILY
+
+
+Tier 4 - Odpor
+Chovani podezreleho
+- Fyzicke napadeni
+- Pokus o utek
+- Vytazeni zbrane nebo ohrozeni
+
+Povolene pouziti sily
+- Pouziti taseru
+- Pouziti peproveho spraye
+- Zatceni podezreleho
+- Varovne vytazeni strelne zbrane
+
+Tier 4-5 - Stupnovani
+Podezrely namiri na osobu
+
+Tier 5 - Smrtici
+Chovani podezreleho
+- Vystreleni ze zbrane
+
+Povolene pouziti sily
+- Muze vest az k zabiti podezreleho</page>
+	
+	<page>PRIRUCKA ZATCENI
+
+Zakony a pravidla o zatceni
+------------------------------
+
+Zatceni osoby je odmeti svobody. Je to obrovska sila a pravomoc. Proto musite byt opatrni, kdy muzete zatknout a kdy ne. Vsichni strazci zakona musi zatykat v souladu se zakonem a pouze za poruseni zakona. Za neopravnene zatceni muzete byt i zatceni.
+
+POZNAMKA: Nebojte se zatykat, pokud mate duvod a zatceny porusoval zakon, vlada bude stat na vasi strane v jakemkoli procesu. 
+
+Pokud je potreba nekoho zatknout a vy nevite duvod (napriklad, kdyz vam nekdo da rozkaz k zatceni), zeptejte se nejdrive, nebo si duvod zjistete. Zatykani musi mit vzdy platny duvod a z neopravneneho zatceni muzete mit problem.</page>
+
+	<page>ZLOCINY/PRESTUPKY
+
+Zlociny: Znasilneni, kradez, vrazda, napadeni, kradez policejniho vozidla, zavineni nehody a utek, unos, vzpoura, napomahani pri zlocinu, utek.
+
+Prestupky: Vniknuti na soukromy pozemek, bezohledna jizda, kradez (pod $250), slovni napadeni, bezohledne ohrozovani, vytrznictvi, nelegalni zavody, falesne nahlaseni vyjezdu zachranky nebo policie, naruseni dopravy.</page>
+
+	<page>ZLOCINY
+
+Zadrzte podezreleho. Pri napadeni nebo vrazde se podezrely casto vymlouva na sebeobranu, vy jste ovsem strazce zakona aby jste zjistil, jestli je to pravda ci nikoliv. Je dulezite znat prava podezreleho. Pokud podezrely utika, pronasledujte ho a pokuste se ho zastavit pouzitim taseru. Pokud utika nebo dela problemy, zpusobuje to horsi sam sobe. Cim horsi utek, tim vetsi trest.</page>
+
+	<page>PRESTUPKY
+
+Nekdy je lepsi zavolat si posily. Pokud podezrely utika, pouzijte taser pro zastaveni a chytte ho. Pri prestupku casto neni potreba ublizit podezrelemu, takze se ho pokusit nezranit, pokud to neni nutne.
+
+Vypiste podezrelemu pokutu, nebo ho zavrete do vezeni. Toto rozhodnuti je na vas, podle vahy prestupku.</page>
+
+	<page>DOPRAVNI NARUSENI
+
+Pokud podezrely neutika, posily nejsou potreba. Vetsinou staci vypsani pokuty. Pokud podezrely ujizdi, je potreba zavolat posily a podezreleho pronasledovat.
+
+A samozrejme je na vas, jakou techniku pouzijete, pro chyceni podezreleho, pokud unika.</page>
+
+	<page>VAROVANI PRED SOUDEM
+
+Mate pravo nevypovidat. Vse co reknete, muze byt u soudu pouzito proti vam. Mate take pravo na sveho pravnika. Pokud si zadneho nenajmete ani jste v minulosti zadneho nemel, soud vam pravnika prideli. Muzete se take obhajovat sam. Pokud mate nejake dotazy sdelte je az u soudu.</page>
+
+	<page>AUTORI
+
+Navrhnul, sestavil a napsal:
+Garry Sokolowski</page>
+</content>

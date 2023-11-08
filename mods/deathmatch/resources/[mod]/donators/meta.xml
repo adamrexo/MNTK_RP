@@ -1,0 +1,58 @@
+<meta>
+	<info author="Maxime - OwlGaming MTA Scripting Team" type="script" description="Donation Management System"/>
+
+	<script src="g_donation_perks.lua" type="server"/>
+	<script src="g_donation_perks.lua" type="client"/>
+
+	<script src="g_donation_data.lua" type="client"/>
+	<script src="g_donation_data.lua" type="server"/>
+
+	<script src="s_donations.lua" type="server"/>
+	<script src="c_donations.lua" type="client"/>
+
+	<export function="loadAllPerks" type="server"/>
+
+	<export function="hasPlayerPerk" type="server"/>
+	<export function="hasPlayerPerk" type="client"/>
+
+	<export function="updatePerkValue" type="server"/>
+	<export function="updatePerkValue" type="client"/>
+
+	<export function="givePlayerPerk" type="server"/>
+
+	<export function="giveAccountGC" type="server"/>
+
+	<script src="s_donation_gui.lua" type="server"/>
+	<script src="c_donation_gui.lua" type="client"/>
+
+	<export function="takeGC" type="server"/>
+	<export function="addPurchaseHistory" type="server"/>
+	<export function="checkValidNumber" type="shared"/>
+	<export function="getPerks" type="shared"/>
+
+	<file src="gamecoin.png"/>
+
+	<file src="typing_icons/1.png"/>
+	<file src="typing_icons/2.png"/>
+	<file src="typing_icons/3.png"/>
+	<file src="typing_icons/4.png"/>
+	<file src="typing_icons/5.png"/>
+	<file src="typing_icons/6.png"/>
+	<file src="typing_icons/7.png"/>
+	<file src="typing_icons/8.png"/>
+	<file src="typing_icons/9.png"/>
+	<file src="typing_icons/10.png"/>
+	<file src="typing_icons/11.png"/>
+	<file src="typing_icons/12.png"/>
+	<file src="typing_icons/13.png"/>
+	<file src="typing_icons/14.png"/>
+	<file src="typing_icons/15.png"/>
+	<file src="typing_icons/16.png"/>
+	<file src="typing_icons/17.png"/>
+	<file src="typing_icons/18.png"/>
+	<file src="typing_icons/19.png"/>
+	<file src="typing_icons/20.png"/>
+
+	<export function="getFlagURL" type="client"/>
+	<export function="isVisible" type="client"/>
+</meta>

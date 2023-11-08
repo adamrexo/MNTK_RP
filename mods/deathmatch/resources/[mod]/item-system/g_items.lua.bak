@@ -1,0 +1,484 @@
+g_items = {
+	[1] = { "Hotdog", "Propečený páreček v čestvém rohlíčku", 1, 2215, 205, 205, 0, 0.01, weight = 0.1 },
+	[2] = { "Mobil", "Mobilní telefon, vypadá jako nový.", 7, 330, 90, 90, 0, 0, weight = 0.3, metadata = { item_name = { type = 'string', rank = 'player' } } },
+	[3] = { "Klíč od vozidla", "Klíč od vozidla", 2, 1581, 270, 270, 0, 0, weight = 0.1, metadata = { key_name = { type = 'string', rank = 'player' } }, ooc_item_value = true },
+	[4] = { "Klíč od domu", "klíče od domu", 2, 1581, 270, 270, 0, 0, weight = 0.1, metadata = { key_name = { type = 'string', rank = 'player' } }, ooc_item_value = true },
+	[5] = { "Klíč od nemovitosti", "Klíč od nemovitosti", 2, 1581, 270, 270, 0, 0, weight = 0.1, metadata = { key_name = { type = 'string', rank = 'player' } }, ooc_item_value = true },
+	[6] = { "Rádio", "Rádiová vysílačka", 7, 330, 90, 90, 0, -0.05, weight = 0.2 },
+	[7] = { "Telefonní Seznam", "Telefonní Seznam kde najdeš všechny kontakty", 5, 2824, 0, 0, 0, -0.01, weight = 2 },
+	[8] = { "Sandwich", "Sandwich se šunkou a sýrem", 1, 2355, 205, 205, 0, 0.06, weight = 0.3 },
+	[9] = { "Sprite", "Plechovka Spritu", 1, 2647, 0, 0, 0, 0.12, weight = 0.2 },
+	[10] = { "Kostka", "Šestihraná červená kostka", 4, 1271, 0, 0, 0, 0.285, weight = 0.1 },
+	[11] = { "Taco", "Taco přivezené přímo z Mexica", 1, 2215, 205, 205, 0, 0.06, weight = 0.1 },
+	[12] = { "Burger", "Dvojtý Cheeseburger s extra sýrem", 1, 2703, 265, 0, 0, 0.06, weight = 0.3 },
+	[13] = { "Kobliha", "Kobliha s čokoladovým posypem", 1, 2222, 0, 0, 0, 0.07, weight = 0.2 },
+	[14] = { "Sušenka", "čokoladová sušenka", 1, 2222, 0, 0, 0, 0.07, weight = 0.1 },
+	[15] = { "Voda", "Láhev minerální vody", 1, 1484, -15, 30, 0, 0.2, weight = 1 },
+	[16] = { "Oblečení", "Čisté oblečení (( Skin ID ##v ))", 6, 2386, 0, 0, 0, 0.1, weight = 1, metadata = { item_name = { type = 'string', rank = 'player', max_length = 50 } } },
+	[17] = { "Hodinky", "Hodinky které ukazují čas", 6, 1271, 0, 0, 0, 0.285, weight = 0.1, metadata = { item_name = { type = 'string', rank = 'staff' } } },
+	[18] = { "Mapa města", "Malá mapka města", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[19] = { "MP3 Přehrávač", "Bílý MP3 přehrávač", 7, 1210, 270, 0, 0, 0.1, weight = 0.1 },
+	[20] = { "Jak někoho spacifikovat pro začátečníky", "Kniha jak někoho standartně zneškodnit", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[21] = { "Box pro začátečníky", "Kniha o boxu", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[22] = { "Kung Fu pro začátečníky", "Kniha o Kung fu", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[23] = { "Boj kolenem pro začátečníky", "Kniha o boji kolenem", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[24] = { "Jak zachytit kop pro začátečníky", "Kniha jak se bránit kopnutí", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[25] = { "Boj loktem pro začátečníky", "Kniha o boji loktem", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[26] = { "Plynová maska", "Černá plynová maska, imunní proti plynu a oslepujicímu granátu", 6, 2386, 0, 0, 0, 0.1, weight = 0.5 },
+	[27] = { "Oslepující granát", "Oslepující granát s napisem To nebol moj flash", 4, 343, 0, 0, 0, 0.1, weight = 0.2 },
+	[28] = { "Zářící tyč", "Zelená zářící tyč", 4, 343, 0, 0, 0, 0.1, weight = 0.2 },
+	[29] = { "Beranidlo", "Červené beranidlo proti dveřím", 4, 1587, 90, 0, 0, 0.05, weight = 3 },
+	[30] = { "Cannabis Sativa", "Cannabis Sativa, pokud se zmixuje, může vytvořit účinnou drogu", 3, 1279, 0, 0, 0, 0, weight = 0.1 },
+	[31] = { "Cocaine Alkaloid", "Cocaine Alkaloid, pokud se zmixuje, může vytvořit účinnou drogu", 3, 1279, 0, 0, 0, 0, weight = 0.1 },
+	[32] = { "Lysergic Acid", "Lysergic Acid, pokud se zmixuje, může vytvořit účinnou drogu", 3, 1279, 0, 0, 0, 0, weight = 0.1 },
+	[33] = { "Nezpracované PCP", "Nezpracované PCP, pokud se zmixuje, může vytvořit účinnou drogu", 3, 1279, 0, 0, 0, 0, weight = 0.1 },
+	[34] = { "Kokain", "Bilý prášek který dodá velkou energii", 3, 1575, 0, 0, 0, 0, weight = 0.1 },
+	[35] = { "Morphine", "Pilulka nebo látka která dodá velkou energii", 3, 1578, 0, 0, 0, -0.02, weight = 0.1 },
+	[36] = { "Extáze", "Pilulka po které zažijete euforii a obrazové bludy ", 3, 1576, 0, 0, 0, 0.07, weight = 0.1 },
+	[37] = { "Heroin", "Bilý prášek po kterém budete zpomalení a v rauši", 3, 1579, 0, 0, 0, 0, weight = 0.1 },
+	[38] = { "Marihuana", "Zelená květina", 3, 3044, 0, 0, 0, 0.04, weight = 0.1 },
+	[39] = { "Metanfetamin", "Krystalická substance která dodá sílu", 3, 1580, 0, 0, 0, 0, weight = 0.1 },
+	[40] = { "Epinephrine (Adrenalin)", "Látka která dodá adrenalin", 3, 1575, 0, 0, 0, -0.02, weight = 0.1 },
+	[41] = { "LSD", "Kyselina lysergová s diethylamidem poskytuje vtipné vizuální efekty.", 3, 1576, 0, 0, 0, 0, weight = 0.1 },
+	[42] = { "Houbičky", "Houbičky po kterých uvidíte nesmyslné věci", 3, 1577, 0, 0, 0, 0, weight = 0.1 },
+	[43] = { "PCP", "Phencyclidine prášek.", 3, 1578, 0, 0, 0, 0, weight = 0.1 },
+	[44] = { "Set malého chemika", "Set s různými kádinkami a látkami", 4, 1210, 90, 0, 0, 0.1, weight = 3 },
+	[45] = { "Pouta", "Pár kovových pout", 4, 2386, 0, 0, 0, 0.1, weight = 0.4 },
+	[46] = { "Lano", "Dlouhé lano", 4, 1271, 0, 0, 0, 0.285, weight = 0.3 },
+	[47] = { "Klíčky od pout", "Pár klíčků od pout", 4, 2386, 0, 0, 0, 0.1, weight = 0.05 },
+	[48] = { "Batoh", "Batoh s kapsami", 4, 3026, 270, 0, 0, 0, weight = 1 },
+	[49] = { "Rybářský prut", "Prut s vlascem na chytaní ryb", 4, 338, 80, 0, 0, -0.02, weight = 1.5 },
+	[50] = { "Kódy dálnice Los Santos", "Kódy dálnice Los Santos", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[51] = { "Chemie 101",  "Úvod do užitečné chemie.", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[52] = { "Manuál pro policejní příslušníky", "Manuál pro policejní příslušníky", 5, 2824, 0, 0, 0, -0.01, weight = 0.3 },
+	[53] = { "Alkoholtestr", "Malý, černý alkoholtestr", 4, 1271, 0, 0, 0, 0.285, weight = 0.2 },
+	[54] = { "Reproduktor", "Malý černý reproduktor", 7, 2226, 0, 0, 0, 0, weight = 3 },
+	[55] = { "Business karta", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[56] = { "Lyžařská kukla", "Lyžařská kukla", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 },
+	[57] = { "Kanystr s benzínem", "Kovový kanystr na benzín", 4, 1650, 0, 0, 0, 0.30, weight = 1 }, -- would prolly to make sense to make it heavier if filled
+	[58] = { "Starobrno", "Nejlepší pivo dovezené přímo z Brna", 1, 1520, 0, 0, 0, 0.15, weight = 1 },
+	--[59] = { "Mudkip", "So i herd u liek mudkips? mabako's Favorite.", 1, 1579, 0, 0, 0, 0, weight = 0 },
+	[60] = { "Trezor", "Trezor pro ukládání cenností", 4, 2332, 0, 0, 0, 0, weight = 5 },
+	[61] = { "Výstražná Světla", "Nouzové světla do auta", 7, 1210, 270, 0, 0, 0.1, weight = 0.1 },
+	[62] = { "Ruský standart", "Doporučuje Benzin Petrolejovič Naftěnko", 1, 1512, 0, 0, 0, 0.25, weight = 1 },
+	[63] = { "Skotská Whisky", "Whisky dovezena přímo ze skotská, značka Jameson", 1, 1512, 0, 0, 0, 0.25, weight = 1 },
+	[64] = { "Odznak PČR", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[65] = { "Odznak HZS", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[66] = { "Páska přes oči", "Černá páska přes oči.", 6, 2386, 0, 0, 0, 0.1, weight = 0.1 },
+	--[67] = { "GPS", "", 6, 1210, 270, 0, 0, 0.1, weight = 0.8 },
+	[68] = { "Ticket do loterie", "Ticket do české národní loterie", 6, 2894, 0, 0, 0, -0.01, weight = 0.1 },
+	[69] = { "Slovník", "Slovník cizích slov", 5, 2824, 0, 0, 0, -0.01, weight = 1.5 },
+	[70] = { "Lekárnička první pomoci", "Zachraňuje životy", 4, 1240, 90, 0, 0, 0.05, weight = function(v) return v/3 end },
+	[71] = { "Blok na poznámky", "Blok na poznámky. Zbývá #v stránek ((/writenote))", 4, 2894, 0, 0, 0, -0.01, weight = function(v) return v*0.01 end },
+	[72] = { "Poznámka", "Na poznámce je: #v", 4, 2894, 0, 0, 0, 0.01, weight = 0.01 },
+	[73] = { "Ovladač pro elevator", "Malý ovladač pro změnu modu elevatoru", 2, 364, 0, 0, 0, 0.05, weight = 0.3, metadata = { key_name = { type = 'string', rank = 'player' } }, ooc_item_value = true },
+	--[74] = { "Bomb", "What could possibly happen when you use this?", 4, 363, 270, 0, 0, 0.05, weight = 2 },
+	--[75] = { "Bomb Remote", "Has a funny red button.", 4, 364, 0, 0, 0, 0.05, weight = 100000 },
+	[76] = { "Policejní štít", "Těžký policejní štít", 4, 1631, -90, 0, 0, 0.1, weight = 5 },
+	[77] = { "Balíček karet", "Balíček karet pro hraní různých her", 4,2824, 0, 0, 0, -0.01, weight = 0.1 },
+	[78] = { "Pilotní licence", "Oficiální licence pro ovládání letadel a vrtulníků", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[79] = { "Porno kazeta", "Porno kazeta, #v", 4,2824, 0, 0, 0, -0.01, weight = 0.2 },
+	[80] = { "Všeobecný Předmět", "#v", 4, 1271, 0, 0, 0, 0, weight = 1, newPickupMethod = true, metadata = { 
+			item_name = { type = 'string', rank = 'staff:once' }, model = { type = 'integer', rank = 'staff:once' }, scale = { type = 'string', rank = 'staff:once' },
+			url = { type = 'string', rank = 'staff' }, texture = { type = 'string', rank = 'staff' }, weight = { type = 'string', rank = 'staff:once' },
+		}
+	}, --itemValue= name:model:scale:texUrl:texName --Do not use http:// in URL (since the : is divider), script will add http:// for this item.
+	[81] = { "Lednice", "Lednice na uchování jídla a pití", 7, 2147, 0, 0, 0, 0, weight = 0.1, storage = true, capacity = 50, acceptItems = {[-1] = true} },
+	[82] = { "Úřad pro identifikaci dopravních služeb", "Úřad pro identifikaci dopravních služeb", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[83] = { "Kafe", "Šálek kávy", 1, 2647, 0, 0, 0, 0.12, weight = 0.25 },
+	[84] = { "Escort 9500ci Radar Detector", "Detects Police within a half mile.", 7, 330, 90, 90, 0, -0.05, weight = 1 },
+	[85] = { "Výstražná siréna (Policie)", "Nouzové policejní sirény.", 7, 330, 90, 90, 0, -0.05, weight = 0.2 },
+	[86] = { "ZZS Legitimace", "#v.", 10, 330, 90, 90, 0, -0.05, weight = 0.3 },
+	[87] = { "Vládní Odznak", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.5 },
+	[88] = { "Sluchátka", "Sluchátka která se dají zapojit do rádia", 7, 1581, 270, 270, 0, 0, weight = 0.15 },
+	[89] = { "Obyčejné jídlo", "#v", 1, 2222, 0, 0, 0, 0.07, weight = 0.5, newPickupMethod = true },
+	[90] = { "Helma na motocross", "Ideální pro řízení motorky", 6, 2799, 0, 0, 0, 0.2, weight = 1.5, scale = 1, hideItemValue = true, metadata = { url = { type = 'string', rank = 'player', max_length = 50 } } },
+	[91] = { "Vaječný koňak", "Mňam, mňam", 1, 2647, 0, 0, 0, 0.1, weight = 0.5 }, --91
+	[92] = { "Krocan", "Mňam, mňam", 1, 2222, 0, 0, 0, 0.1, weight = 3.8 },
+	[93] = { "Vánoční puding", "Mňam, mňam", 1, 2222, 0, 0, 0, 0.1, weight = 0.4 },
+	[94] = { "Vánoční dárek", "Vánoční dárek s červenou mašlí", 4, 1220, 0, 0, 0, 0.1, weight = 1 },
+	[95] = { "Obyčejné pití", "#v", 1, 1455, 0, 0, 0, 0, weight = 0.5, newPickupMethod = true }, --[95] = { "Drink", "", 1, 1484, -15, 30, 0, 0.2, weight = 1 },
+	[96] = { "Macbook Pro", "Macbook pro prohlížení e-mailů a internetu", 6, 2886, 0, 0, 180, 0.1, weight = function(v) return v == 1 and 0.2 or 1.5 end },
+	[97] = { "Manuál jak se chovat při požáru", "Informační manuál jak se chovat při požáru", 5, 2824, 0, 0, 0, -0.01, weight = 0.5 },
+	[98] = { "Ovladač garáže", "Ovladač pro otvírání a zavírání garáže", 2, 364, 0, 0, 0, 0.05, weight = 0.3, metadata = { key_name = { type = 'string', rank = 'player' } }, ooc_item_value = true },
+	[99] = { "Quiz hra", "Pojď si zahrát Quiz.", 1, 2355, 205, 205, 0, 0.06, weight = 0.4 },
+	[100] = { "Krabice mléka", "Součástí jsou hrudky!", 1, 2856, 0, 0, 0, 0, weight = 0.2 },
+	[101] = { "Krabice džusu", "Máš žízeň?", 1, 2647, 0, 0, 0, 0.12, weight = 0.2 },
+	[102] = { "Zelí", "Pro ty vegetariány", 1, 1271, 0, 0, 0, 0.1, weight = 0.4 },
+	[103] = { "Polička", "Polička na kterou si můžete něco položit", 4, 3761, -0.15, 0, 85, 1.95, weight = 0.1, storage = true, capacity = 100 },
+	[104] = { "Přenosná televize", "Přenosná televize pro koukání na filmy", 6, 1518, 0, 0, 0, 0.29, weight = 1 },
+	[105] = { "Krabička cigaret", "Krabička s #v cigaretami", 6, 3044 , 270, 0, 0, 0.1, weight = function(v) return 0.1 + v*0.03 end }, -- 105
+	[106] = { "Cigareta", "Další věc co se dá vykouřit", 6, 3044 , 270, 0, 0, 0.1, weight = 0.03 }, -- 106
+	[107] = { "Zapalovač", "Vytváří plamen", 6, 1210, 270, 0, 0, 0.1, weight = 0.05 }, -- 107
+	[108] = { "Palačinka", "Mňamy mňam.", 1, 2222, 0, 0, 0, 0.07, weight = 0.5 }, -- 108
+	[109] = { "Ovoce", "Velice zdravá pochutina.", 1, 2222, 0, 0, 0, 0.07, weight = 0.35 }, -- 109
+	[110] = { "Zelenina", "Velice zdravá pochutina..", 1, 2222, 0, 0, 0, 0.07, weight = 0.35  }, -- 110
+	[111] = { "GPS", "GPS, ukazuje i aktuální mapu", 6, 1210, 270, 0, 0, 0.1, weight = 0.3 }, -- 111
+	[112] = { "Odznak dálniční policie", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, -- 142
+	[113] = { "Pack of Glowsticks", "Pack with #v glowsticks in it, from the brand 'Friday'.", 6, 1210, 270, 0, 0, 0.1, weight = function(v) return v * 0.2 end }, -- 113
+	[114] = { "Vylepšení vozidla", "#v", 4, 1271, 0, 0, 0, 0.285, weight = 1.5 }, -- 114
+	[115] = { "Zbraň", "#v ", 8, 2886, 270, 0, 1, 0.1, 2, weight = function( v )
+																		local weaponID = tonumber( explode(":", v)[1] )
+																		return weaponID and weaponweights[ weaponID ] or 1
+																	end
+	}, -- 115
+	[116] = { "Munice", "V bedně je #v munice", 9, 2040, 0, 1, 0, 0.1, 3,
+		weight = function( v )
+			local packs = explode(":", v)
+			local ammo_id = tonumber( packs[1] )
+			local bullets = tonumber( packs[2] )
+			if ammo_id and bullets then
+				local ammunition = exports.weapon:getAmmo(ammo_id)
+				return ammunition and exports.global:round(ammunition.bullet_weight*bullets, 3)
+			end
+			return 0.2
+		end
+	}, -- 2886 / 116
+	[117] = { "Rampa", "Useful for loading DFT-30s.", 4, 1210, 270, 1, 0, 0.1, 3, weight = 5 }, -- 117
+	[118] = { "Mýtné", "Dává se do vozidla, zaplatíš vždy když projedeš přes mýtnou bránu", 6, 1210, 270, 0, 0, 0.1, weight = 0.3 }, -- 118
+	[119] = { "Sanitary ID", "Identifikační karta Sanitary", 10, 1210, 270, 0, 0, 0.1, weight = 0.2 }, -- 119
+	[120] = { "Oblek potápěče", "Dovolí ti být pod vodou delší dobu", 6, 1271, 0, 0, 0, 0.285, weight = 4 }, --120
+	[121] = { "Bedna plná věcí", "Velká bedna plná věcí", 4, 1271, 0, 0, 0, 0.285, weight = function(v) return tonumber(v) and tonumber(v) or 50 end }, --121
+	[122] = { "Světle modrý šátek", "Světle modrý hadr.", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 }, -- 122
+	[123] = { "Červený šátek", "Červený šátek", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 }, -- 123
+	[124] = { "Žlutý šátek", "Žlutý šátek", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 }, -- 124
+	[125] = { "Fialový šátek", "Fialový šátek", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 }, -- 125
+	[126] = { "Opasek", "Černý, kožený opasek s velkým počkem pouzder", 4, 2386, 270, 0, 0, 0, weight = 1 }, -- 126
+	[127] = { "LSIA identifikace", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --127
+	[128] = { "UNUSED BADGE", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --128 | ADD TTR FACTION BAGDE ITEM | 24.1.14
+	[129] = { "ID přímého importu", "ID přímého importu.", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --129
+	[130] = { "Alarm ve vozidle", "Alarm ve vozidle", 6, 1210, 270, 0, 0, 0.1, weight = 0.3 }, -- 130
+	[131] = { "LSCSD Badge", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, -- 131
+	[132] = { "Láhev na předpis", "Láhev na předpis, obsahuje předepsané léky", 3, 1575, 0, 0, 0, 0.04, weight = 0.1 }, --132
+	[133] = { "Řidičská licence - Automobil", "Řidičák", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[134] = { "Peníze", "Několik českých peněz", 10, 1212, 0, 0, 0, 0.04, weight = 0.3 }, -- 134
+	[135] = { "Modrý šátek", "Modrý šátek", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 }, -- 135
+	[136] = { "Hnědý šátek", "Hnědý šátek", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 }, -- 136
+	[137] = { "Skrytá kamera", "Kamera pod dveře", 7, 330, 90, 90, 0, -0.05, weight = 0.3 }, -- 137
+	[138] = { "Návnada do vozidla", "Zařízení které se použivá při policejních operacích", 4, 1271, 0, 0, 0, 0.285, weight = 0.5 }, -- 138
+	[139] = { "Zařízení na vystopování vozidla", "Zařízení na vystopování vozidla", 7, 1271, 0, 0, 0, 0.285, weight = 0.2 }, --139
+	[140] = { "Oranžové výstražné světla", "Oranžové výstražné světla které se dají dát do vozidla", 7, 1210, 270, 0, 0, 0.1, weight = 0.1 }, --140
+	[141] = { "Megafon", "Zařízení na zesílení dosahu hlasu", 7, 1210, 270, 0, 0, 0.1, weight = 0.1 }, --141
+	[142] = { "ID pro řízení autobusu nebo Taxi", "ID pro řízení autobusu nebo Taxi", 10, 1210, 270, 0, 0, 0.1, weight = 0.3 }, -- 142
+	[143] = { "Terminál pro mobilní data", "Terminál pro mobilní data", 7, 2886, 0, 0, 180, 0.1, weight = 0.1 }, -- 143
+	[144] = { "Žluté světla", "Žluté světla která se dají dát do auta", 7, 2886, 270, 0, 0, 0.1, weight = 0.1 }, -- 144
+	[145] = { "Baterka", "Baterie: #v%", 7, 15060, 0, 90, 0, 0.05, weight = 0.3 },
+	[146] = { "Los Santos District Court Identification Card", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[147] = { "Tapeta na zeď", "Pro zkrášlení interiéru", 4, 2894, 0, 0, 0, -0.01, weight = 0.01 }, --147
+	[148] = { "Licence pro nošení zbraně na veřejnosti", "Licence která umožňuje nosit zbraň na veřejnosti", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[149] = { "Concealed Carry Weapon License - LSPD", "A firearm permit which allows the concealment of a firearm, issued by LSPD.", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[150] = { "ATM karta", "Plastová karta pro výběr z bankomatů (ATM).", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[151] = { "Dalkové ovládání pro zdvyh", "Dálkové ovládání pro zvednutí vozidla", 2, 364, 0, 0, 0, 0.05, weight = 0.3 },
+	[152] = { "Občanský průkaz", "Občanský průkaz pro identifikaci", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[153] = { "Řidičský průkaz - motorka", "Řidičský průkaz pro řízení motorky", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[154] = { "Rybářský lístek", "Lístek, který umožňuje chytání ryb", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[155] = { "Řidičský průkaz - loď", "Řidičský průkaz pro řizení lodí", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[156] = { "Superior Court of San Andreas ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.1 },
+	[157] = { "Sada nástrojů", "Kovová sada nástrojů obsahující různé nástroje", 4, 1271, 0, 0, 0, 0, weight = 0.5 },
+	[158] = { "Zelený šátek", "Zelený šátek", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 }, -- 158
+	[159] = { "Sparta Inc. ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3}, -- 159 | Sparta Incorporated ID
+	[160] = { "Kufřík", "Kufřík", 6, 1210, 90, 0, 0, 0.1, weight = 0.4}, -- Exciter
+	[161] = { "Fleming Architecture and Construction ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3}, -- 161 | anumaz Fleming Architecture and Construction ID
+	[162] = { "Neprůstřelná vesta", "Neprůstřelná vesta která chrání před kulkami", 6, 3916, 90, 0, 0, 0.1, weight = 4}, -- Exciter
+	[163] = { "Sportovní taška", "Sportovní taška pro přenos věcí", 6, 3915, 90, 0, 0, 0.2, weight = 0.4}, -- Exciter
+	[164] = { "Doktorská taška", "Taška plná lékařského vybavení", 6, 3915, 0, 0, 0, 0.2, weight = 1, texture = {{":artifacts/textures/medicbag.png", "hoodyabase5"}} }, -- Exciter
+	[165] = { "DVD", "Video Disk", 4, 2894, 0, 0, 0, -0.01, weight = 0.1 }, -- Exciter
+	[166] = { "ClubTec VS1000", "Video Systém", 4, 3388, 0, 0, 90, -0.01, weight = 5, scale = 0.6, preventSpawn = false, newPickupMethod = true }, -- Exciter
+	[167] = { "Obrázek (Zlatý rám)", "Dej si do něj obrázek a šup s ním na stěnu", 4, 2287, 0, 0, 0, 0, weight = 1, doubleSided = true, newPickupMethod = true }, -- Exciter
+	[168] = { "Oranžový šátek", "Oranžový šátek", 6, 2386, 0, 0, 0, 0.1, weight = 0.2 },
+	[169] = { "Digitání zabezpečovací zámek", "Špičkový bezpečnostní systém je mnohem bezpečnější než tradiční klíčový zámek, protože ho nelze nabourat ani prolomit", 6, 2922, 0, 0, 180, 0.2, weight = 0.5 }, --Maxime
+	[170] = { "Kreditní karta", "Protáhni kartu pro #v", 2, 1581, 270, 270, 0, 0, weight = 0.1 }, -- Exciter
+	[171] = { "Motorkářská helma", "Idealní pro řízení motorky", 6, 3911, 0, 0, 0, 0.2, weight = 1.5, scale = 1, hideItemValue = true, metadata = { url = { type = 'string', rank = 'player', max_length = 50 } } },
+	[172] = { "Celoobličejová maska", "Idealní pro řízení motorky", 6, 3917, 0, 0, 0, 0.2, weight = 1.5, scale = 1, hideItemValue = true, metadata = { url = { type = 'string', rank = 'player', max_length = 50 } } },
+	[173] = { "Prodejní formulář vozidla", "Dokument který potřebujete pro přepis vozidla na někoho jiného", 4, 2894, 0, 0, 0, -0.01, weight = 0.01 }, -- Anumaz
+	[174] = { "FAA Electronical Map Book", "Electronic device displaying information and maps around all San Andreas.", 4, 1271, 0, 0, 0, -0.01, weight = 0.01 }, -- Anumaz
+	[175] = { "Plakát", "Propagační plakát", 4, 2717, 0, 0, 0, 0.7, weight = 0.01, hideItemValue = true }, -- Exciter
+	[176] = { "Reproduktor", "Velký černý reproduktor, poskytne vám zvuk dostatečně velký, aby zaplnil jakýkoliv prostor, čistý zvuk při jakékoli hlasitosti.", 7, 2232, 0, 0, 0, 0.6, weight = 3 }, -- anumaz
+	[177] = { "Zařízení pro kontaktování dispečinku", "Zařízení pro kontaktování dispečinku", 7, 1581, 0, 0, 0, 0.6, weight = 0.01 }, -- anumaz
+    [178] = { "Kniha", "#v", 5, 2824, 0, 0, 0, -0.1, weight = 0.1}, -- Chaos
+    [179] = { "Vzhled auta", "Motivy na zkrášlení auta", 4, 2894, 0, 0, 0, -0.01, weight = 0.01 }, -- Exciter
+    [180] = { "SAPT ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3}, -- Exciter
+    [181] = { "Potřeby pro kuřáky", "Obsahuje #v papírků", 4, 3044 , 270, 0, 0, 0.1, weight = function(v) return 0.1 + v*0.03 end },
+    [182] = { "Smotaný joint", "Joint smotaný nejepší marihuanou", 4, 1485, 270, 0, 0, 0.1, weight = 0.03 },
+    [183] = { "Viozy Membership Card", "Viozy Businesses Exclusive Membership", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --  Chase
+    [184] = { "HP Charcoal Window Film", "Viozy HP Charcoal Window Film ((50 /chance))", 4, 1271, 0, 0, 0, 0, weight = 0.6 }, -- Chase
+    [185] = { "CXP70 Window Film", "Viozy CXP70 Window Film ((95 /chance))", 4, 1271, 0, 0, 0, 0, weight = 0.3 }, -- Chase
+    [186] = { "Viozy Border Edge Cutter (Red Anodized)", "Border Edge Cutter for Tinting", 4, 1271, 0, 0, 0, 0, weight = 0.05 }, -- Chase
+    [187] = { "Viozy Solar Spectrum Tranmission Meter", "Spectrum Meter for testing film before use", 7, 1271, 0, 0, 0, 0, weight = 2 }, -- Chase
+    [188] = { "Viozy Tint Chek 2800", "Measures the Visible Light Transmission on any film/glass", 7, 1271, 0, 0, 0, 0, weight = 1 }, -- Chase
+    [189] = { "Viozy Equalizer Heatwave Heat Gun", "Easy to use heat gun perfect for shrinking back windows", 7, 1271, 0, 0, 0, 0, weight = 1 }, -- Chase
+    [190] = { "Viozy 36 Multi-Purpose Cutter Bucket", "Ideal for light cutting jobs while applying tint", 4, 1271, 0, 0, 0, 0, weight = 0.5 }, -- Chase
+    [191] = { "Viozy Tint Demonstration Lamp", "Effectve presentation of tinted application", 7, 1271, 0, 0, 0, 0, weight = 0.5 }, -- Chase
+    [192] = { "Viozy Triumph Angled Scraper", "6-inch Angled Scraper for applying tint", 4, 1271, 0, 0, 0, 0, weight = 0.3 }, -- Chase
+    [193] = { "Viozy Performax 48oz Hand Sprayer", "Performax Hand Sprayer for tint application", 4, 1271, 0, 0, 0, 0, weight = 1 }, -- Chase
+    [194] = { "Viozy Vehicle Ignition - 2010 ((20 /chance))", "Vehicle Ignition made by Viozy for 2010", 4, 1271, 0, 0, 0, 0, weight = 1.5 }, -- Chase
+    [195] = { "Viozy Vehicle Ignition - 2011 ((30 /chance))", "Vehicle Ignition made by Viozy for 2011", 4, 1271, 0, 0, 0, 0, weight = 1.3 }, -- Chase
+    [196] = { "Viozy Vehicle Ignition - 2012 ((40 /chance))", "Vehicle Ignition made by Viozy for 2012", 4, 1271, 0, 0, 0, 0, weight = 1 }, -- Chase
+    [197] = { "Viozy Vehicle Ignition - 2013 ((50 /chance))", "Vehicle Ignition made by Viozy for 2013", 4, 1271, 0, 0, 0, 0, weight = 0.8 }, -- Chase
+    [198] = { "Viozy Vehicle Ignition - 2014 ((70 /chance))", "Vehicle Ignition made by Viozy for 2014", 4, 1271, 0, 0, 0, 0, weight = 0.6 }, -- Chase
+    [199] = { "Viozy Vehicle Ignition - 2015 ((90 /chance))", "Vehicle Ignition made by Viozy for 2015", 4, 1271, 0, 0, 0, 0, weight = 0.4 }, -- Chase
+    --[200] = { "Viozy Vehicle Ignition - 2016", "Vehicle Ignition not yet in production", 4, 1271, 0, 0, 0, 0, weight = 1 }, -- Chase (not to be used)
+    --[201] = { "Viozy Vehicle Ignition - 2017", "Vehicle Ignition not yet in production", 4, 1271, 0, 0, 0, 0, weight = 1 }, -- Chase (not to be used)
+    --[202] = { "Viozy Vehicle Ignition - 2018", "Vehicle Ignition not yet in production", 4, 1271, 0, 0, 0, 0, weight = 1 }, -- Chase (not to be used)
+    [203] = { "Viozy Hidden Vehicle Tracker 315 Pro ((Undetectable))", "GPS HVT 315 Pro, easy installation ((and undetectable)), by Viozy", 7, 1271, 0, 0, 0, 0, weight = 3 }, -- Chase
+    [204] = { "Viozy Hidden Vehicle Tracker 272 Micro ((30 /chance))", "GPS HVT 272 Micro, easy installation ((30 /chance to be found)), by Viozy", 7, 1271, 0, 0, 0, 0, weight = 0.5 }, -- Chase
+    [205] = { "Viozy HVT 358 Portable Spark Nano 4.0 ((50 /chance))", "GPS HVT 358 Spark Nano 4.0 Portable ((50 /chance to be found)), by Viozy", 7, 1271, 0, 0, 0, 0, weight = 0.2 }, -- Chase
+	--[206] = { "Wheat Seed", "A nice seed with potential", 7, 1271, 0, 0, 0, 0, weight = 0.1 }, -- Chaos
+	--[207] = { "Barley Seed", "A nice seed with potential", 7, 1271, 0, 0, 0, 0, weight = 0.1 }, -- Chaos
+	--[208] = { "Oat Seed", "A nice seed with potential", 7, 1271, 0, 0, 0, 0, weight = 0.1 }, -- Chaos
+	[209] = { "FLU Device", "An eletronical device by Firearms Licensing Unit", 7, 1271, 0, 0, 0, 0, weight = 0.1}, -- anumaz
+	[210] = { "Vánoční Coca-Cola", "Vánoční edice Coca-Coly.", 1, 2880, 180, 0, 0, 0, weight = 0.2}, -- Exciter
+	[211] = { "Vánoční lístek do loterie", "Od Santy.", 10, 1581, 270, 270, 0, 0, weight = 0.1, preventSpawn = true}, -- Exciter
+	[212] = { "Sněhové řetězy", "Sněhové řetězy na kola", 4, 1098, 0, 0, 0, 0, weight = 1}, -- Exciter
+	[213] = { "Pinnekjott", "Exciter's christmas favourite.", 1, 2215, 205, 205, 0, 0.06, weight = 0.1, preventSpawn = true}, -- Exciter
+	[214] = { "Generic Drug", "#v", 3, 1576, 0, 0, 0, 0.07, weight = 0.1}, -- Chaos
+	[215] = { "Concealed Carry Weapon License - SAHP", "A firearm permit which allows the concealment of a firearm, issued by SAHP.", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[216] = { "Tier 3 Weaponry License - SAN ANDREAS", "A firearm permit which allows the handling of Tier 3 weaponry, issued by the ATF bureau.", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[217] = { "Beeper", "An eletronical beeper used on specific frequencies.", 7, 1271, 0, 0, 0, 0, weight = 0.1}, -- anumaz, currently used for lsfd /alarm
+	[219] = { "Thin Body Armor (TYPE2)", "Hidden and protective.", 6, 1581, 270, 270, 0, 0, weight = 2 },
+	[220] = { "Kevlar Body Armor (TYPE3)", "Visible and good quality.", 6, 1581, 270, 270, 0, 0, weight = 2 },
+	[221] = { "Kevlar High End Body Armor (TYPE4)", "Military grade body armor.", 6, 1581, 270, 270, 0, 0, weight = 2 },
+	[222] = { "SACMA ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3}, -- Chaos
+	[223] = { "Storage Generic", "#v", 4, 3761, -0.15, 0, 85, 0.2, weight = 2, storage = true, capacity = 10 }, -- Chaos --value= Name:ModelID:Capacity
+	[224] = { "Crack", "A small rock like substance, when smoked gives an intense feeling of euphoria.", 3, 1575, 0, 0, 0, 0, weight = 0.1 },
+	[225] = { "Ketamine", "A powder like substance when injected produces an out of body experience, when snorted a short burst of energy and euphoria.", 3, 1576, 0, 0, 0, 0, weight = 0.1 },
+	[226] = { "Oxycodone", "A prescription-strength painkiller that is often prescribed for moderate to severe pain.", 3, 1576, 0, 0, 0, 0, weight = 0.1 },
+	[227] = { "Rohypnol", "A pill like substance, often crushed into powder; also known as the 'Date-rape' drug. Users often experience loss of muscle control, confusion, drowsiness and amnesia.", 3, 1576, 0, 0, 0, 0, weight = 0.1 },
+	[228] = { "Xanax", "A pill like substance commonly prescribed to help alleviate symptoms of anxiety and panic.", 3, 1576, 0, 0, 0, 0, weight = 0.1 },
+	[229] = { "JGC ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3}, --Exciter
+	[230] = { "RPMF Incorporated ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3}, --Exciter
+	[231] = { "Shipping Container", "A large freight container.", 4, 2934, 0, 0, 0, 1.44, weight = 0.1, hideItemValue = true, storage = true, capacity = 200 }, --Exciter --preventSpawn = true --value= registration;textureSides;textureDoors
+	[232] = { "Car Battery Charger", "Can quickly charge almost every battery type, and it's a great choice for home mechanics and small shops.", 7, 2040, 0, 1, 0, 0.1, 3, weight = 4.3 },
+	[233] = { "DOC Badge", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[234] = { "USMCR ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[235] = { "Dinoco ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[236] = { "National Park Service ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 },
+	[237] = { "Černý šátek", "Černý šátek.", 6, 2386, 0, 0, 0, 0.1, weight = 0.2}, -- George
+	[238] = { "Šedý šátek", "Šedý šátek.", 6, 2386, 0, 0, 0, 0.1, weight = 0.2}, -- George
+	[239] = { "Bílý šátek", "Bílý šátek.", 6, 2386, 0, 0, 0, 0.1, weight = 0.1}, -- George
+	[240] = { "Christmas Hat", "A festive hat.", 6, 954, 0, 0, 0, 0.1, weight = 0.1, preventSpawn = true}, -- Chaos
+	--{ "Armor", "Kevlar-made armor.", 6, 373, 90, 90, 0, -0.05, weight = 1 }, -- 138
+	--{ "Dufflebag", "LOL", 10, 2462, 0, 0, 0, 0.04, weight = 0.1 }, -- 135
+	[241] = { "Red Rose Funeral Home ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Exciter
+	[242] = { "Workbench", "A bench to build things on.", 4, 936, 0, 0, 0, 0, weight = 4, storage = true, capacity = 20 }, --Exciter, factory system --preventSpawn = true
+	[243] = { "Factory Machine", "A machine to produce things.", 4, 14584, 0, 0, 0, 0, weight = 5, storage = true, capacity = 50 }, --Exciter, factory system --preventSpawn = true
+	[244] = { "Oven", "A oven for cooking and baking.", 4, 2417, 0, 0, 0, 0, weight = 4, storage = true, capacity = 10 }, --Exciter, factory system --preventSpawn = true
+	[245] = { "Legal Corporation ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Exciter
+	[246] = { "Bank of Los Santos ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Exciter
+	[247] = { "Astro Corporation ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Exciter
+	[248] = { "Projector Remote", "A small remote to control the projector ##v.", 2, 364, 0, 0, 0, 0.05, weight = 0.3, ooc_item_value = true },
+	[249] = { "Western Solutions ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Unitts
+	[250] = { "St John Ambulance ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Exciter
+	[251] = { "Pizza Stack ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Exciter
+	[252] = { "Veliký koš", "Veliký koš.", 4, 1344, 0, 0, 0, 0, weight = 4, hideItemValue = true, storage = true, capacity = 200 }, --Exciter
+	[253] = { "Koš", "Koš.", 4, 1344, 270, 270, 0, 0, weight = 3, hideItemValue = true, storage = true, capacity = 50 }, --Exciter
+	[254] = { "Výkal", "#vkg výkalů.", 4, 1344, 270, 270, 0, 0, weight = function(v) return v end }, --Exciter --math.floor((v/50)*(10^2)+0.5)/(10^2)
+	[255] = { "Odpad", "#vkg odpadu.", 4, 1344, 270, 270, 0, 0, weight = function(v) return v end }, --Exciter
+	[256] = { "Blu-Ray", "A video disc.", 4, 2894, 0, 0, 0, -0.01, weight = 0.1 }, --Exciter
+	[257] = { "ClubTec VS2000", "Video System.", 4, 3388, 0, 0, 90, -0.01, weight = 6, preventSpawn = true, newPickupMethod = true, image = 166 }, --Exciter
+	[258] = { "Lamborghini Automotive ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3, image = 129 }, --Exciter
+	[259] = { "SL Incorporated ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3, image = 129 }, --Exciter
+	[260] = { "Ammonia Bottle", "A bottle of ammonia.", 1, 1484, -15, 30, 0, 0.2, weight = 1 }, --Chaos
+	[261] = { "Emergency Siren (Firetruck)", "An emergency siren to put in your car.", 7, 330, 90, 90, 0, -0.05, weight = 0.2, image = 85 }, -- Chaos
+	[262] = { "Token (( Token na dům ))", "Malý plastový token. (( Lze za něj koupit dům do hodnoty < 100.000 kč ))", 4, 2894, 0, 0, 0, -0.01, weight = 0.1 }, --Chaos
+	[263] = { "Token (( Token na auto ))", "Malý plastový token. (( Lze za něj koupit vozidlo do hodnoty < 35.000 kč ))", 4, 2894, 0, 0, 0, -0.01, weight = 0.1 }, --Chaos
+	[264] = { "VMAT ADS-B", "Airport ground vehicle tracking unit.", 6, 2886, 0, 0, 180, 0.1, weight = 0.9, preventSpawn = true }, --Exciter
+	[265] = { "Saint Ernest Medical Center Staff ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3 }, --Exciter
+	[266] = { "SAAN Staff ID", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.3, image = 129 },
+	[267] = { "Citation", "A ticket issued by the authorities.", 4, 2894, 0, 0, 0, -0.01, weight = 0.01 },
+	[268] = { "Surfboard", "A surfboard.", 4, 2406, 0, 0, 0, 1.2, weight = 2 }, --Exciter
+	[269] = { "Emergency Siren (Ambulance)", "An emergency siren to put in your car.", 7, 330, 90, 90, 0, -0.05, weight = 0.2, image = 85 }, -- Hurley
+	[270] = { "Rukavice", "Pár rukavic které si můžete nasadit.", 6, 2386, 0, 0, 0, 0.1, weight = 0.1, hideItemValue = true, metadata = { item_name = { type = 'string', rank = 'player', max_length = 50 } } }, -- Hurley
+	[271] = { "Vystřílené Náboje", "#v", 4, 2061, 90, 0, 0, 0, weight = 0.1, scale = 0.2 }, 
+	[272] = { "Labrador", "#v", 4, 2351, 0, 0, 0, 0.9, weight = 5 }, -- (Dog) Yannick
+	[273] = { "Generic Fish", "#v", 4, 1604, 0, 90, 0, 0.07, weight = 0.1, preventSpawn = true},
+	[274] = { "Ice Skates", "Perfect for skating on ice!", 6, 1852, 0, 0, 0, 1, weight = 0.1},
+	[275] = { "Bicycle Lock", "Bicycle Lock.", 4, 1271, 0, 0, 0, 0, weight = 0.1}, -- SjoerdPSV 
+	[284] = { "ANPR System", "Automatic NumberPlate Recognition.", 4, 367, 270, 270, 0, 0, weight = 0.1},
+	[285] = { "Štrůdl", "Chutný štrůdl s džemem", 1, 2222, 0, 0, 0, 0.07, weight = 0.1 },
+	[300] = { "Antilag", "Antilag", 4, 1271 , 270, 0, 0, 0.1, weight = 0.1 },
+	[301] = { "Turbo", "Turbo", 4, 1271 , 270, 0, 0, 0.1, weight = 0.1 },
+	[302] = { "Ilegální Mapa", "Mapa", 4, 1271 , 270, 0, 0, 0.1, weight = 0.1 },
+	[303] = { "Vládní Povolení", "#v", 10, 1581 , 270, 0, 0, 0.1, weight = 0.1 },
+	[304] = { "Psí Známky", "Psí Známky", 10, 330, 90, 90, 0, -0.05, weight = 0.3 },
+	[305] = { "Šperhák", "Vhodný na vloupání do Nemovitosti", 4, 1271 , 270, 0, 0, 0.1, weight = 0.1 },
+	[306] = { "BIS Odznak", "#v", 10, 1581, 270, 270, 0, 0, weight = 0.5 },
+	[568] = { "Přepravní bedna", "Přepravní bedna", 6, 1271 , 270, 0, 0, 0.1, weight = 2.5 },
+}
+
+	-- name, description, category, model, rx, ry, rz, zoffset, weight
+
+	-- categories:
+	-- 1 = Food & Drink
+	-- 2 = Keys
+	-- 3 = Drugs
+	-- 4 = Other
+	-- 5 = Books
+	-- 6 = Clothing & Accessories
+	-- 7 = Electronics
+	-- 8 = guns
+	-- 9 = bullets
+	-- 10 = wallet
+
+weaponmodels = {
+	[1]=331, [2]=333, [3]=326, [4]=335, [5]=336, [6]=337, [7]=338, [8]=339, [9]=341,
+	[15]=326, [22]=346, [23]=347, [24]=348, [25]=349, [26]=350, [27]=351, [28]=352,
+	[29]=353, [32]=372, [30]=355, [31]=356, [33]=357, [34]=358, [35]=359, [36]=360,
+	[37]=361, [38]=362, [16]=342, [17]=343, [18]=344, [39]=363, [41]=365, [42]=366,
+	[43]=367, [10]=321, [11]=322, [12]=323, [14]=325, [44]=368, [45]=369, [46]=371,
+	[40]=364, [100]=373
+}
+
+-- other melee weapons?
+weaponweights = {
+	[22] = 1.14, [23] = 1.24, [24] = 2, [25] = 3.1, [26] = 2.1, [27] = 4.2, [28] = 3.6, [29] = 2.640, [30] = 4.3, [31] = 2.68, [32] = 3.6, [33] = 4.0, [34] = 4.3
+}
+
+--
+-- Vehicle upgrades as names
+--
+vehicleupgrades = {
+	"Pro Spoiler", "Win Spoiler", "Drag Spoiler", "Alpha Spoiler", "Champ Scoop Hood",
+	"Fury Scoop Hood", "Roof Scoop", "Right Sideskirt", "5x Nitro", "2x Nitro",
+	"10x Nitro", "Race Scoop Hood", "Worx Scoop Hood", "Round Fog Lights", "Champ Spoiler",
+	"Race Spoiler", "Worx Spoiler", "Left Sideskirt", "Upswept Exhaust", "Twin Exhaust",
+	"Large Exhaust", "Medium Exhaust", "Small Exhaust", "Fury Spoiler", "Square Fog Lights",
+	"Offroad Wheels", "Right Alien Sideskirt (Sultan)", "Left Alien Sideskirt (Sultan)",
+	"Alien Exhaust (Sultan)", "X-Flow Exhaust (Sultan)", "Left X-Flow Sideskirt (Sultan)",
+	"Right X-Flow Sideskirt (Sultan)", "Alien Roof Vent (Sultan)", "X-Flow Roof Vent (Sultan)",
+	"Alien Exhaust (Elegy)", "X-Flow Roof Vent (Elegy)", "Right Alien Sideskirt (Elegy)",
+	"X-Flow Exhaust (Elegy)", "Alien Roof Vent (Elegy)", "Left X-Flow Sideskirt (Elegy)",
+	"Left Alien Sideskirt (Elegy)", "Right X-Flow Sideskirt (Elegy)", "Right Chrome Sideskirt (Broadway)",
+	"Slamin Exhaust (Chrome)", "Chrome Exhaust (Broadway)", "X-Flow Exhaust (Flash)", "Alien Exhaust (Flash)",
+	"Right Alien Sideskirt (Flash)", "Right X-Flow Sideskirt (Flash)", "Alien Spoiler (Flash)",
+	"X-Flow Spoiler (Flash)", "Left Alien Sideskirt (Flash)", "Left X-Flow Sideskirt (Flash)",
+	"X-Flow Roof (Flash)", "Alien Roof (Flash)", "Alien Roof (Stratum)", "Right Alien Sideskirt (Stratum)",
+	"Right X-Flow Sideskirt (Stratum)", "Alien Spoiler (Stratum)", "X-Flow Exhaust (Stratum)",
+	"X-Flow Spoiler (Stratum)", "X-Flow Roof (Stratum)", "Left Alien Sideskirt (Stratum)",
+	"Left X-Flow Sideskirt (Stratum)", "Alien Exhaust (Stratum)", "Alien Exhaust (Jester)",
+	"X-FLow Exhaust (Jester)", "Alien Roof (Jester)", "X-Flow Roof (Jester)", "Right Alien Sideskirt (Jester)",
+	"Right X-Flow Sideskirt (Jester)", "Left Alien Sideskirt (Jester)", "Left X-Flow Sideskirt (Jester)",
+	"Shadow Wheels", "Mega Wheels", "Rimshine Wheels", "Wires Wheels", "Classic Wheels", "Twist Wheels",
+	"Cutter Wheels", "Switch Wheels", "Grove Wheels", "Import Wheels", "Dollar Wheels", "Trance Wheels",
+	"Atomic Wheels", "Stereo System", "Hydraulics", "Alien Roof (Uranus)", "X-Flow Exhaust (Uranus)",
+	"Right Alien Sideskirt (Uranus)", "X-Flow Roof (Uranus)", "Alien Exhaust (Uranus)",
+	"Right X-Flow Sideskirt (Uranus)", "Left Alien Sideskirt (Uranus)", "Left X-Flow Sideskirt (Uranus)",
+	"Ahab Wheels", "Virtual Wheels", "Access Wheels", "Left Chrome Sideskirt (Broadway)",
+	"Chrome Grill (Remington)", "Left 'Chrome Flames' Sideskirt (Remington)",
+	"Left 'Chrome Strip' Sideskirt (Savanna)", "Covertible (Blade)", "Chrome Exhaust (Blade)",
+	"Slamin Exhaust (Blade)", "Right 'Chrome Arches' Sideskirt (Remington)",
+	"Left 'Chrome Strip' Sideskirt (Blade)", "Right 'Chrome Strip' Sideskirt (Blade)",
+	"Chrome Rear Bullbars (Slamvan)", "Slamin Rear Bullbars (Slamvan)", false, false, "Chrome Exhaust (Slamvan)",
+	"Slamin Exhaust (Slamvan)", "Chrome Front Bullbars (Slamvan)", "Slamin Front Bullbars (Slamvan)",
+	"Chrome Front Bumper (Slamvan)", "Right 'Chrome Trim' Sideskirt (Slamvan)",
+	"Right 'Wheelcovers' Sideskirt (Slamvan)", "Left 'Chrome Trim' Sideskirt (Slamvan)",
+	"Left 'Wheelcovers' Sideskirt (Slamvan)", "Right 'Chrome Flames' Sideskirt (Remington)",
+	"Bullbar Chrome Bars (Remington)", "Left 'Chrome Arches' Sideskirt (Remington)", "Bullbar Chrome Lights (Remington)",
+	"Chrome Exhaust (Remington)", "Slamin Exhaust (Remington)", "Vinyl Hardtop (Blade)", "Chrome Exhaust (Savanna)",
+	"Hardtop (Savanna)", "Softtop (Savanna)", "Slamin Exhaust (Savanna)", "Right 'Chrome Strip' Sideskirt (Savanna)",
+	"Right 'Chrome Strip' Sideskirt (Tornado)", "Slamin Exhaust (Tornado)", "Chrome Exhaust (Tornado)",
+	"Left 'Chrome Strip' Sideskirt (Tornado)", "Alien Spoiler (Sultan)", "X-Flow Spoiler (Sultan)",
+	"X-Flow Rear Bumper (Sultan)", "Alien Rear Bumper (Sultan)", "Left Oval Vents", "Right Oval Vents",
+	"Left Square Vents", "Right Square Vents", "X-Flow Spoiler (Elegy)", "Alien Spoiler (Elegy)",
+	"X-Flow Rear Bumper (Elegy)", "Alien Rear Bumper (Elegy)", "Alien Rear Bumper (Flash)",
+	"X-Flow Rear Bumper (Flash)", "X-Flow Front Bumper (Flash)", "Alien Front Bumper (Flash)",
+	"Alien Rear Bumper (Stratum)", "Alien Front Bumper (Stratum)", "X-Flow Rear Bumper (Stratum)",
+	"X-Flow Front Bumper (Stratum)", "X-Flow Spoiler (Jester)", "Alien Rear Bumper (Jester)",
+	"Alien Front Bumper (Jester)", "X-Flow Rear Bumper (Jester)", "Alien Spoiler (Jester)",
+	"X-Flow Spoiler (Uranus)", "Alien Spoiler (Uranus)", "X-Flow Front Bumper (Uranus)",
+	"Alien Front Bumper (Uranus)", "X-Flow Rear Bumper (Uranus)", "Alien Rear Bumper (Uranus)",
+	"Alien Front Bumper (Sultan)", "X-Flow Front Bumper (Sultan)", "Alien Front Bumper (Elegy)",
+	"X-Flow Front Bumper (Elegy)", "X-Flow Front Bumper (Jester)", "Chrome Front Bumper (Broadway)",
+	"Slamin Front Bumper (Broadway)", "Chrome Rear Bumper (Broadway)", "Slamin Rear Bumper (Broadway)",
+	"Slamin Rear Bumper (Remington)", "Chrome Front Bumper (Remington)", "Chrome Rear Bumper (Remington)",
+	"Slamin Front Bumper (Blade)", "Chrome Front Bumper (Blade)", "Slamin Rear Bumper (Blade)",
+	"Chrome Rear Bumper (Blade)", "Slamin Front Bumper (Remington)", "Slamin Rear Bumper (Savanna)",
+	"Chrome Rear Bumper (Savanna)", "Slamin Front Bumper (Savanna)", "Chrome Front Bumper (Savanna)",
+	"Slamin Front Bumper (Tornado)", "Chrome Front Bumper (Tornado)", "Chrome Rear Bumper (Tornado)",
+	"Slamin Rear Bumper (Tornado)"
+}
+
+--
+-- Badges
+--
+
+function getBadges( )
+	return {
+		-- [itemID] = {elementData, name, factionIDs, color, iconID} iconID 1 = ID, 2 = badge
+		-- old faction badges that existed since being inscribed on stone tablets thousands of years ago
+		--[156]  = { "Soudní Legitimace", 		"Soudní Legitimace",			{[50] = true},				 	 {0, 102, 255}, 2},
+		[64]  = { "PČR Odznak", 		"PČR Odznak",			{[2] = true},				 	{0,100,255, true},	2},
+		--[112]  = { "SAHP badge", 		"a SAHP badge",			{[59] = true},				 	{222, 184, 135, true},	2}, -- Sheriff department
+		[65]  = { "HZS Odznak", 		"HZS Odznak", {[4] = true},	    {175, 50, 50},	1},
+		[86]  = { "ZZS Legitimace",		"ZZS Legitimace",				{[3] = true},					{150,150,255},	2},
+		[87]  = { "Vládní Odznak",		"Vládní Odznak",		{[1] = true},					{0, 80, 0},	2},
+		[304]  = { "Psí Známky",		"Psí Známky",		{[13] = true},					{145, 97, 58},	1},
+		[306]  = { "BIS Odznak",		"BIS Odznak",		{[20] = true},					{47, 175, 214},	2},
+
+		-- šáteks
+		[122] = { "světlemodrý šátek", "světlemodrý šátek",				{[-1] = true},					{0,185,200},	122, bandana = true},
+		[123] = { "červený šátek", "červený šátek",				{[-1] = true},					{190,0,0},	123, bandana = true},
+		[124] = { "žlutý šátek", "žlutý šátek",				{[-1] = true},					{255,250,0},	124, bandana = true},
+		[125] = { "fialový šátek", "fialový šátek",				{[-1] = true},					{220,0,255},	125, bandana = true},
+		[135] = { "modrý šátek", "modrý šátek",				{[-1] = true},					{0,100,255},	135, bandana = true},
+		[136] = { "hnědý šátek", "hnědý šátek",				{[-1] = true},					{125,63,50},	136, bandana = true},
+		[158] = { "zelený šátek", "zelený šátek",				{[-1] = true},					{50,150,50},	158, bandana = true},
+		[168] = { "oranžový šátek", "oranžový šátek",				{[-1] = true},					{210,105,30},	168, bandana = true},
+		[237] = { "černý šátek", "černý šátek", {[-1] = true}, {0,0,0}, 215, bandana = true},
+		[238] = { "šedý šátek", "šedý šátek", {[-1] = true}, {255,255,255}, 216, bandana = true},
+		[239] = { "bílý šátek", "bílý šátek", {[-1] = true}, {100,100,100}, 217, bandana = true},
+
+		-- newer faction badges
+		[127] = { "LSIA Identification",		"a LSIA ID card",	{[47] = true},	{255,140,0},	1},
+		[82] = { "Bureau of Traffic Services ID", "An ID from the Bureau of Traffic Services",	{[4] = true},	{255,136,0},	1}, --MAXIME | ADD TTR FACTION BAGDE ITEM | 24.1.14
+		[159] = { "Sparta Inc. ID", "An ID from Sparta Inc.", {[212] = true},  {52, 152, 219}, 1}, -- anumaz, Cargo Group ID
+		[180] = { "SAPT ID", "An ID from San Andreas Public Transport", {[64] = true},  {73, 136, 245}, 1}, -- Exciter
+		[222] = { "LSMA ID", "an LSMA ID", {[130] = true}, {143, 52, 173}, 1},
+		[229] = { "JGC ID", "a JGC ID", {[74] = true}, {178, 0, 0}, 1},
+		[230] = { "RPMF Incorporated ID", "a RPMF Incorporated ID", {[78] = true}, {0, 69, 156}, 1},
+		[233] = { "Department of Corrections ID Card", "DOC Badge", {[84] = true}, {11, 97, 11}, 2},
+		[234] = { "United States Marine Corps ID Card", "USMCR ID", {[81] = true}, {41, 57, 8}, 2},
+		[235] = { "Dinoco ID Card", "a Dinoco ID", {[147] = true}, {0, 240, 255}, 1},
+		[236] = { "National Park Service ID Card", "National Park Serv. ID", {[86] = true}, {45, 74, 31}, 1},
+		[241] = { "Sharp Towing ID", "a Sharp Towing ID", {[101] = true}, {189, 189, 189}, 1},
+		[245] = { "Legal Corporation ID", "a Legal Corporation ID", {[99] = true}, {255, 127, 0}, 1},
+		[246] = { "Bank of Los Santos ID", "a Bank of Los Santos ID", {[17] = true}, {144, 195, 212}, 1},
+		[247] = { "Astro Corporation ID", "a Astro Corporation ID", {[91] = true}, {173, 151, 64}, 1},
+		--[131] = { "LSCSD Badge", "a Los Santos County Sheriff's Deparment badge", {[1] = true, [142] = true}, {222, 184, 135, true},	2},
+		[249] = { "Western Solutions ID", "a Western Solutions ID card", {[159] = true}, {255,215,0}, 1},
+		[250] = { "St John Ambulance ID", "a St John Ambulance ID card", {[134] = true}, {0, 171, 23}, 1},
+		[251] = { "Pizza Stack ID", "a Pizza Stack ID card", {[172] = true}, {255, 173, 51}, 1},
+		[258] = { "Lamborghini Automotive ID", "a Lamborghini Automotive ID card", {[93] = true}, {10, 10, 10}, 1},
+		[259] = { "SL Incorporated ID", "a SL Incorporated ID card", {[104] = true}, {66, 66, 66}, 1},
+		[265] = { "Saint Ernest Medical Center Staff ID", "a Saint Ernest Medical Center Staff ID card", {[164] = true}, {255, 112, 229}, 1},
+		[266] = { "SAAN Staff ID", "a San Andreas Action News ID card", {[145] = true}, {255, 156, 51}, 1},
+		[241] = { "Red Rose Funeral Home ID", "a Red Rose Funeral Home ID card", {[210] = true}, {255, 153, 153}, 1}
+	}
+end
+
+-- badges/IDs should generally be in the wallet.
+for k, v in pairs(getBadges()) do
+	if not v[3][-1] and g_items[k][3] ~= 10 then
+		outputDebugString('Odznak/ID' .. k .. ' není v peněžence.')
+	end
+end
+
+--
+-- Mask Data
+--
+function getMasks( pohlavi )
+	
+	return {
+		-- [itemID] = { elementData, textWhenPuttingOn, textWhentakingOff, hideIdentity }
+		
+		[26]  = {"gasmask",			"si nasazuje na obličej plynovou masku",		"si sundává plynovou masku",					true},
+		[56]  = {"mask",			"si nasazuje na obličej kuklu",				"si sundává kuklu",							true},
+		[90]  = {"helmet",			"si nasazuje helmu na motorku",				"si sundává helmu na motorku",				false},
+		[120] = {"scuba",			"si nasazuje potápěčský oblek",				"si sundává potápěčský oblek",				true},
+		[171] = {"bikerhelmet",		"si nasazuje helmu na motorku",				"si sundává helmu na motorku",				false},
+		[172] = {"fullfacehelmet",	"si nasazuje helmu na motorku",				"si sundává helmu na motorku",				true},
+		[240] = {"christmashat",	"si nasazuje vánoční čepici",				"si sundává vánoční čepici",					false},
+	}
+end
+
+replacedModelsWithWrongCollisionCheck = { [3915] = true }
