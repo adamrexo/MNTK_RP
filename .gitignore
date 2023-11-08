@@ -1,0 +1,6 @@
+mods/deathmatch/backups/
+mods/deathmatch/resource-cache/
+mods/deathmatch/resources/*/logs/logs/
+mods/deathmatch/logs/
+mods/deathmatch/internal.db
+mods/deathmatch/registry.db
