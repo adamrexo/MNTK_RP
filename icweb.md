@@ -5,9 +5,9 @@ IC web bude tak ako mntk RP mód, open-source a bude si ho môcť stiahnuť kaž
 # Stránky na ic webe
 
 Stranky ktoré budu na ic webe defaultne: 
-- hlavnu index stránku kde budu zobrazené všetky weby
-- socialnu sieť krej meno si budete mocť nastaviť budú sa na ňu dať uploadovať fotky alebo textove posty
-- reklamnú stránku , kde sa budu zobrazovať reklamy od hráčov
+- hlavna index stránka kde budu zobrazené všetky weby
+- socialna sieť ktorej meno si budete mocť nastaviť, budú sa na ňu dať uploadovať fotky alebo textove posty
+- reklamná stránka , kde sa budu zobrazovať reklamy od hráčov
 
 # Vlastné stránky
 
