@@ -14,8 +14,8 @@
   <script src="ranks/s_ranks.lua" type="server"/>
   <script src="ranks/s_permissions.lua" type="server"/>
   <script src="ranks/c_permissions.lua" type="client"/>
-  <script src="plugins_s.lua" type="server"/>
-  <script src="plugins_c.lua" type="client"/>
+  <!--<script src="plugins_s.lua" type="server"/>
+  <script src="plugins_c.lua" type="client"/>-->
   <export function="canAccessFactionManager" type="shared"/>
   <export function="getFactionType" type="shared"/>
   <export function="getFactionRankData" type="server"/>
