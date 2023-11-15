@@ -1,8 +1,0 @@
-<map edf:definitions="editor_main">
-    <object id="object (shbbyhswall13_lvs) (1)" breakable="true" interior="10" alpha="255" dimension="113" model="9131" scale="3.2" doublesided="false" collisions="true" posX="239.89999" posY="112.8" posZ="1004.3" rotX="0" rotY="0" rotZ="0"></object>
-    <object id="object (shbbyhswall13_lvs) (2)" breakable="true" interior="10" alpha="255" dimension="113" model="9131" scale="3.2" doublesided="false" collisions="true" posX="253.2002" posY="117.40039" posZ="1004.5" rotX="0" rotY="0" rotZ="0"></object>
-    <object id="object (kmb_ot) (1)" breakable="true" interior="10" alpha="255" dimension="113" model="2954" scale="2.2" doublesided="false" collisions="true" posX="253.2" posY="110.1" posZ="1002.2" rotX="0" rotY="0" rotZ="0"></object>
-    <object id="object (kmb_ot) (2)" breakable="true" interior="10" alpha="255" dimension="113" model="2954" scale="2.2" doublesided="false" collisions="true" posX="239.5" posY="118.6" posZ="1002.2" rotX="0" rotY="0" rotZ="0"></object>
-    <object id="object (kmb_ot) (3)" breakable="true" interior="10" alpha="255" dimension="113" model="2954" scale="2.2" doublesided="false" collisions="true" posX="239.39999" posY="126.1" posZ="1002.2" rotX="0" rotY="0" rotZ="0"></object>
-    <object id="object (kmb_ot) (4)" breakable="true" interior="10" alpha="255" dimension="113" model="2954" scale="2.2" doublesided="false" collisions="true" posX="253.3" posY="126.2" posZ="1002.2" rotX="0" rotY="0" rotZ="0"></object>
-</map>

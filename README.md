@@ -14,7 +14,6 @@ Na tento produkt sa nevzťahuje žiadna záruka, ale ak by ste potrebovali s hoc
 
 # To do
 - preložiť character creation
-- preložiť tutorial
 - [IC Web](https://github.com/ZatON318/MNTK_RP/blob/main/icweb.md) so socialnou sieťou a ďalšimi vecami
 
 # Inštalacia
